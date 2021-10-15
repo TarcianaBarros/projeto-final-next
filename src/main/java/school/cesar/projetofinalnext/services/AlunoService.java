@@ -12,11 +12,7 @@ import school.cesar.projetofinalnext.util.CpfUtil;
 
 //Criar, alterar, consultar e excluir
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Service
-
 public class AlunoService {
     @Autowired
     private AlunoDao alunoDao;

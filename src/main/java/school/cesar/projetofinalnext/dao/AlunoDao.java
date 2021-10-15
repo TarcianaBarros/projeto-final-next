@@ -8,5 +8,4 @@ import school.cesar.projetofinalnext.ententies.Aluno;
 public interface AlunoDao extends JpaRepository <Aluno, Long> {
     Aluno findByCpf(String cpf);
 
-    void salvar (Aluno aluno);
-}
+   }

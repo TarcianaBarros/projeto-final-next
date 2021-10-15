@@ -4,9 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -14,8 +13,13 @@ import javax.persistence.Table;
 @Table(name = "CURSO")
 @Entity
 public class Curso {
-    @Column(name = "CURSO", nullable = true)
-   private Disciplina disciplina;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", nullable = false)
+    private Long id;
+    @OneToMany
+    @JoinColumn(name = "curso_id")
+    private List<Disciplina> disciplina;
 
 
 }

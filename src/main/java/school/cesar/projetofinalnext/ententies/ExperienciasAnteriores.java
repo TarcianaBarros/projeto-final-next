@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -15,6 +13,10 @@ import javax.persistence.Table;
 @Table(name = "EXPERIENCIAS")
 @Entity
 public class ExperienciasAnteriores {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", nullable = false)
+    private Long id;
     @Column(name = "EXPERIENCIAS", nullable = true)
     private String experiencias;
 
