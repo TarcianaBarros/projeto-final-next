@@ -3,10 +3,12 @@ package school.cesar.projetofinalnext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import school.cesar.projetofinalnext.dao.AlunoDao;
 import school.cesar.projetofinalnext.ententies.Aluno;
 import school.cesar.projetofinalnext.services.AlunoService;
 
+@SpringBootApplication
 public class Teste implements CommandLineRunner {
     @Autowired
     private AlunoDao clienteDAO;
