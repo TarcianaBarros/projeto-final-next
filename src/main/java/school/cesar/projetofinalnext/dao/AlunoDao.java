@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 import school.cesar.projetofinalnext.ententies.Aluno;
 
 @Repository
-public interface AlunoDao extends JpaRepository<Aluno, Long> {
+public interface AlunoDao extends JpaRepository <Aluno, Long> {
     Aluno findByCpf(String cpf);
+
+    void salvar (Aluno aluno);
 }

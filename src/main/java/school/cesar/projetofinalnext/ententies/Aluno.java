@@ -10,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "ALUNO")
+
 public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,11 +22,11 @@ public class Aluno {
 
     @Column(name = "CPF", nullable = false, unique = true)
     private String cpf;
-    @Column(name = "DATA_DE_NASCIMENTO", nullable = false)
+    @Column(name = "DATA_DE_NASCIMENTO", nullable = true) //voltar nullable para false
     private String dataNascimento;
    // @Column(name = "CURSO", nullable = false)
    // private Curso curso;
-    @Column(name = "ENDEREÇO", nullable = false)
+    @Column(name = "ENDEREÇO", nullable = true) //voltar nullable para false
     private String endereco;
 
 
