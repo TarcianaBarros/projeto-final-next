@@ -24,10 +24,13 @@ public class Aluno {
     private String cpf;
     @Column(name = "DATA_DE_NASCIMENTO", nullable = true) //voltar nullable para false
     private String dataNascimento;
-   // @Column(name = "CURSO", nullable = false)
-   // private Curso curso;
+    @Column(name = "CURSO", nullable = false)
+    private Curso curso;
     @Column(name = "ENDEREÇO", nullable = true) //voltar nullable para false
     private String endereco;
+    @Column(name = "EXPERIENCIAS", nullable = true) //voltar nullable para false
+    private String experiencia;
+
 
 
 }
